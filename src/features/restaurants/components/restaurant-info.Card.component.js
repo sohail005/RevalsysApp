@@ -25,8 +25,8 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     ],
     address = "100 some random street",
     isOpenNow = true,
-    rating = 4,
-    isClosedTemporarily = true,
+    rating = 5,
+    isClosedTemporarily = false,
   } = restaurant;
 
   //intialising rating
@@ -45,7 +45,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
           </Rating>
           <SectionEnd>
             {isClosedTemporarily && (
-              <Text variant="error">CLOSED TEMPORARILY</Text>
+              <Text  variant="caption" style={{color:"red"}}>CLOSED TEMPORARILY</Text>
             )}
             <Spacer position="left" size="large">
               {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
