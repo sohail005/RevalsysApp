@@ -22,7 +22,7 @@ export const colors = {
       secondary: "#757575",
       disabled: "#9C9C9C",
       inverse: "#FFFFFF",
-      error: "#D0421B",
+      error: "red",
       success: "#138000",
     },
   };
