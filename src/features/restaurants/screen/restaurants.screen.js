@@ -19,7 +19,8 @@ const RestaurantList = styled(FlatList).attrs({
   contentContainerStyle: {
     padding: 10,
   },
-})`margin-bottom: ${(props) => props.theme.space[2]};backgroundColor:lightgray`;
+})`margin-bottom: ${(props) => props.theme.space[2]};
+backgroundColor:lightgray`;
 
 
 export const RestaurantsScreen =()=>(
