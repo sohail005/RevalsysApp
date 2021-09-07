@@ -1,13 +1,13 @@
-import antwerp from "./antwerp.json";
-import chicago from "./chicago.json";
-import toronto from "./toronto.json";
-import san_francisco from "./san_francisco.json";
+import chitguppa from "./chitguppa.json";
+import bhalki from "./bhalki.json";
+import humnabad from "./humnabad.json";
+import bidar from "./bidar.json";
 
 export const mocks = {
-  "51.219448,4.402464": antwerp,
-  "43.653225,-79.383186": toronto,
-  "41.878113,-87.629799": chicago,
-  "37.7749295,-122.4194155": san_francisco,
+  "17.696618269519853, 77.20588949033757": chitguppa,
+  "17.768957060339194, 77.13009577481354": humnabad,
+  "18.05140150943545, 77.21757873407361": bhalki,
+  "17.911638416531567, 77.51943729923917": bidar,
 };
 
 export const mockImages = [
