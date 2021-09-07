@@ -1,6 +1,6 @@
 import { mocks, mockImages } from "./mock";
 import camelize from "camelize";
-export const restaurantsRequest = (location = "17.768957060339194, 77.13009577481354") => {
+export const restaurantsRequest = (location = "17.696618269519853, 77.20588949033757") => {
   return new Promise((resolve, reject) => {
     const mock = mocks[location];
     if (!mock) {
