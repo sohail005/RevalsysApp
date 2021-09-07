@@ -21,7 +21,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
-        "name": "Fairmont Park -Bhalki",
+        "name": "Fairmont Chicago -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -73,7 +73,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
-        "name": "Trump International Hotel & Tower® Chicago",
+        "name": "Trump International -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -127,7 +127,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
-        "name": "Swissotel Chicago",
+        "name": "Swissotel Chicago -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -178,7 +178,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Lou Malnati's Pizzeria",
+        "name": "Lou Malnati's -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -231,7 +231,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Siena Tavern",
+        "name": "Siena Tavern -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -283,7 +283,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Petterino's",
+        "name": "Petterino's -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -335,7 +335,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Giordano's",
+        "name": "Giordano's -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -387,7 +387,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "The Gage",
+        "name": "The Gage -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -439,7 +439,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Yolk - South Loop",
+        "name": "Yolk - South -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -492,7 +492,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "M Burger",
+        "name": "M Burger-bhalki",
         "permanently_closed": true,
         "photos": [
           {
@@ -540,7 +540,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/cafe-71.png",
-        "name": "Wildberry Pancakes & Cafe",
+        "name": "Wildberry Pancakes -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -592,7 +592,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "The Berghoff Restaurant",
+        "name": "The Berghoff -bhalki",
         "permanently_closed": true,
         "photos": [
           {
@@ -641,7 +641,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Lou Mitchell's",
+        "name": "Lou Mitchell's -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -692,7 +692,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "South Branch Tavern and Grille",
+        "name": "South Branch -bhalki",
         "permanently_closed": true,
         "photos": [
           {
@@ -742,7 +742,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Sweetwater Tavern and Grille",
+        "name": "Sweetwater -bhalki",
         "permanently_closed": true,
         "photos": [
           {
@@ -792,7 +792,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/bar-71.png",
-        "name": "Buddy Guy's Legends",
+        "name": "Buddy Guy's -bhalki",
         "photos": [
           {
             "height": 2048,
@@ -842,7 +842,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Frontera Grill",
+        "name": "Frontera Grill -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -893,7 +893,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "One North Kitchen & Bar",
+        "name": "One North Kitchen & Bar -bhalki",
         "permanently_closed": true,
         "photos": [
           {
@@ -943,7 +943,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "312 Chicago",
+        "name": "312 Chicago -bhalki",
         "opening_hours": {
           "open_now": true
         },
@@ -995,7 +995,7 @@
           }
         },
         "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/restaurant-71.png",
-        "name": "Chicago Cut Steakhouse",
+        "name": "Chicago Cut -bhalki",
         "opening_hours": {
           "open_now": true
         },
