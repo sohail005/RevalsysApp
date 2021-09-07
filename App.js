@@ -19,11 +19,15 @@ import {
   Lato_400Regular,
 } from '@expo-google-fonts/lato';
 
+
+
+
 const Tab = createBottomTabNavigator();
 const TAB_ICON = {
-  Restaurants: "md-restaurant",
-  Map: "md-map",
-  Settings: "md-settings",
+ 
+  Restaurants: "md-at",
+  Map: "",
+  Settings: "",
 };
 
 const Settings = () => (
@@ -60,8 +64,10 @@ return null;
   return (
     <>
     <ThemeProvider theme={theme}>
-    <RestaurantsContextProvider>
+    
+      <RestaurantsContextProvider>
           <NavigationContainer>
+            
             <Tab.Navigator
               screenOptions={createScreenOptions}
               tabBarOptions={{
@@ -69,13 +75,15 @@ return null;
                 inactiveTintColor: "gray",
               }}
             >
+              
               <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
               <Tab.Screen name="Map" component={Map} />
               <Tab.Screen name="Settings" component={Settings} />
-              
             </Tab.Navigator>
+           
           </NavigationContainer>
         </RestaurantsContextProvider>
+        
   </ThemeProvider>
 <ExpoStatusBar style="auto"/>
     </>
