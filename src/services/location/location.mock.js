@@ -1,11 +1,11 @@
 export const locations = {
-  "chitguppa": {
+  antwerp: {
     results: [
       {
         geometry: {
           location: {
-            lng: 17.696618269519853,
-            lat: 77.20588949033757,
+            lng: 4.402464,
+            lat: 51.219448,
           },
           viewport: {
             northeast: {
@@ -21,7 +21,7 @@ export const locations = {
       },
     ],
   },
-  bidar: {
+  "san francisco": {
     results: [
       {
         geometry: {
@@ -35,7 +35,7 @@ export const locations = {
     ],
     status: "OK",
   },
-  bhalki: {
+  chicago: {
     results: [
       {
         geometry: {
@@ -57,7 +57,7 @@ export const locations = {
       },
     ],
   },
-  humnabad: {
+  toronto: {
     results: [
       {
         geometry: {
