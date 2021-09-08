@@ -41,3 +41,7 @@ export const SectionEnd = styled.View`
   flex-direction: row;
   justify-content: flex-end;
 `;
+
+export const placeId= styled.View`
+
+`;
