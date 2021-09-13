@@ -1,4 +1,5 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
+
 import {
   restaurantsRequest,
   restaurantsTransform,
@@ -23,7 +24,7 @@ export const RestaurantsContextProvider = ({ children }) => {
         .then(restaurantsTransform)
         .then((results) => {
           setIsLoading(false);
-         setRestaurants(results);
+          setRestaurants(results);
         })
         .catch((err) => {
           setIsLoading(false);
