@@ -1,5 +1,6 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
+
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component";
 import star from "../../../infrastructure/theme/star";
@@ -14,10 +15,10 @@ import {
   Rating,
   Icon,
   Address,
-  placeId,
 } from "./restaurant-info-card.styles";
+import { Ionicons } from "expo-vector-icons";
 
-export const RestaurantInfoCard = ({ restaurant = {} }) => {
+ export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
     name = "Some Restaurant",
     icon = "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/lodging-71.png",
@@ -25,12 +26,12 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
       "https://www.foodiesfeed.com/wp-content/uploads/2019/06/top-view-for-box-of-2-burgers-home-made-600x899.jpg",
     ],
     address = "100 some random street",
-    isOpenNow = false,
-    rating = 5,
+    isOpenNow = true,
+    rating = 4,
     isClosedTemporarily = true,
+    placeId,
   } = restaurant;
 
-  //intialising rating
   const ratingArray = Array.from(new Array(Math.floor(rating)));
 
   return (
@@ -40,7 +41,7 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
         <Text variant="label">{name}</Text>
         <Section>
           <Rating>
-          {ratingArray.map((_, i) => (
+            {ratingArray.map((_, i) => (
               <SvgXml
                 key={`star-${placeId}-${i}`}
                 xml={star}
@@ -51,12 +52,12 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
           </Rating>
           <SectionEnd>
             {isClosedTemporarily && (
-              <Text  variant="caption" style={{color:"red"}}>CLOSED TEMPORARILY</Text>
+              <Text variant="error">CLOSED TEMPORARILY</Text>
             )}
             <Spacer position="left" size="large">
               {isOpenNow && <SvgXml xml={open} width={20} height={20} />}
             </Spacer>
-            <Spacer position="left" size="large">
+            <Spacer position="right" size="medium">
               <Icon source={{ uri: icon }} />
             </Spacer>
           </SectionEnd>
@@ -66,3 +67,5 @@ export const RestaurantInfoCard = ({ restaurant = {} }) => {
     </RestaurantCard>
   );
 };
+
+ 
