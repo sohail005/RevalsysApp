@@ -11,6 +11,7 @@ const defaultTextStyles = (theme) => `
 
 const body = (theme) => `
     font-size: ${theme.fontSizes.body};
+    
 `;
 
 const hint = (theme) => `
