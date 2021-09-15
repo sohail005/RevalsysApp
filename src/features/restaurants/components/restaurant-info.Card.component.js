@@ -1,11 +1,11 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
-
+import { View } from "react-native";
 import { Spacer } from "../../../components/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component";
 import star from "../../../infrastructure/theme/star";
 import open from "../../../infrastructure/theme/open";
-
+import { Favourite } from "../../../services/favourites/favourite.component";
 import {
   RestaurantCard,
   RestaurantCardCover,
@@ -16,7 +16,7 @@ import {
   Icon,
   Address,
 } from "./restaurant-info-card.styles";
-import { Ionicons } from "expo-vector-icons";
+
 
  export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
@@ -36,7 +36,10 @@ import { Ionicons } from "expo-vector-icons";
 
   return (
     <RestaurantCard elevation={5}>
-      <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
+      <View>
+      <Favourite restaurant={restaurant} />
+        <RestaurantCardCover key={name} source={{ uri: photos[0] }} />
+      </View>
       <Info>
         <Text variant="label">{name}</Text>
         <Section>
