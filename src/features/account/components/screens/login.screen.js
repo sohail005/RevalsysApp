@@ -12,7 +12,7 @@ import {
 import { Text } from "../../../../components/typography/text.component";
 import { Spacer } from "../../../../components/spacer/spacer.component";
 import { AuthenticationContext } from "../../../../services/authentication/authentication.context";
-import { ActivityIndicator, Colors } from "react-native-paper";
+
 
 export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
