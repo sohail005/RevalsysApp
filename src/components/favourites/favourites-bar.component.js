@@ -1,9 +1,9 @@
 import React from "react";
 import { ScrollView, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
-import { Spacer } from "../../components/spacer/spacer.component";
-import { CompactRestaurantInfo } from "../../components/restourant/compact-restaurant-info.component";
-import { Text } from "../../components/typography/text.component";
+import { Spacer } from "../spacer/spacer.component";
+import { CompactRestaurantInfo } from "../restourant/compact-restaurant-info.component";
+import { Text } from "../typography/text.component";
 
 const FavouritesWrapper = styled.View`
   padding: 5px;

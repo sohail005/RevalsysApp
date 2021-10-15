@@ -1,11 +1,32 @@
 {
   "expo": {
-    "name": "easycommerce",
-    "slug": "easycommerce",
-    "version": "1.0.0",
+    "name": "Sohail",
+    "slug": "Easycommerce",
+    "version": "0.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
     "assetBundlePatterns": [
       "**/*"
-    ]
-  },
-  "name": "easycommerce"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.sonupatel005.Easycommerce"
+    },
+    "description": "",
+    "githubUrl": "https://github.com/sohail005/1st-native-app.git"
+  }
 }

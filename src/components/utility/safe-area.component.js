@@ -4,4 +4,5 @@ import styled from "styled-components/native";
 export const SafeArea = styled(SafeAreaView)`
 
   ${StatusBar.currentHeight && `margin-bottom: ${StatusBar.currentHeight}px`};
+  background-color: ${(props) => props.theme.colors.bg.primary};
 `;

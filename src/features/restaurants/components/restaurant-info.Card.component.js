@@ -5,7 +5,7 @@ import { Spacer } from "../../../components/spacer/spacer.component";
 import { Text } from "../../../components/typography/text.component";
 import star from "../../../infrastructure/theme/star";
 import open from "../../../infrastructure/theme/open";
-import { Favourite } from "../../../services/favourites/favourite.component";
+import { Favourite } from "../../../components/favourites/favourite.component";
 import {
   RestaurantCard,
   RestaurantCardCover,

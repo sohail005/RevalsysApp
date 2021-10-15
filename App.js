@@ -1,9 +1,10 @@
 import { Navigation } from "./src/infrastructure/navigation/index";
 import {StatusBar as ExpoStatusBar}  from 'expo-status-bar';
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useContext } from "react";
 import {ThemeProvider} from "styled-components/native";
 import * as firebase from "firebase";
 import {theme} from "./src/infrastructure/theme";
+
 import {
   useFonts as useOswald,
   Oswald_400Regular,
