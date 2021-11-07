@@ -13,7 +13,6 @@ import { Text } from "../../../../components/typography/text.component";
 import { Spacer } from "../../../../components/spacer/spacer.component";
 import { AuthenticationContext } from "../../../../services/authentication/authentication.context";
 
-
 export const LoginScreen = ({ navigation }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -21,7 +20,7 @@ export const LoginScreen = ({ navigation }) => {
   return (
     <AccountBackground>
       <AccountCover />
-      <Title>Easy Commerce</Title>
+      <Title>LOGIN</Title>
       <AccountContainer>
         <AuthInput
           label="E-mail"
@@ -38,17 +37,16 @@ export const LoginScreen = ({ navigation }) => {
             textContentType="password"
             secureTextEntry
             autoCapitalize="none"
-            
             onChangeText={(p) => setPassword(p)}
           />
         </Spacer>
         {error && (
           <ErrorContainer size="large">
             <Text variant="error">{error}</Text>
-            </ErrorContainer>
+          </ErrorContainer>
         )}
         <Spacer size="large">
-        {!isLoading ? (
+          {!isLoading ? (
             <AuthButton
               icon="lock-open-outline"
               mode="contained"

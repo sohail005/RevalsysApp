@@ -1,40 +1,62 @@
 import React, { useContext, useState } from "react";
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import styled from "styled-components/native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { useFocusEffect } from "@react-navigation/native";
-
-import { List, Avatar } from "react-native-paper";
-
 import { Text } from "../../../../src/components/typography/text.component";
-import { Spacer } from "../../../components/spacer/spacer.component";
-import { SafeArea } from "../../../components/utility/safe-area.component";
-import { AuthenticationContext } from "../../../services/authentication/authentication.context";
-
-const SettingsItem = styled(List.Item)`
+import { Button, TextInput } from "react-native-paper";
+import { Popover } from "@material-ui/core";
+/* const SettingsItem = styled(List.Item)`
   padding: ${(props) => props.theme.space[3]};
 `;
 const AvatarContainer = styled.View`
   align-items: center;
 `;
+ */
+export const FeedbackScreen = ({ navigation }) => {
+  /* const { onLogout, user } = useContext(AuthenticationContext);
+  const [photo, setPhoto] = useState(null); */
 
-export const SettingsScreen = ({ navigation }) => {
-  const { onLogout, user } = useContext(AuthenticationContext);
-  const [photo, setPhoto] = useState(null);
-
-  const getProfilePicture = async (currentUser) => {
+  /*  const getProfilePicture = async (currentUser) => {
     const photoUri = await AsyncStorage.getItem(`${currentUser.uid}-photo`);
     setPhoto(photoUri);
-  };
+  }; */
 
-  useFocusEffect(
+  /* useFocusEffect(
     React.useCallback(() => {
-    getProfilePicture(user);
-  }, [user]));
+      getProfilePicture(user);
+    }, [user])
+  );
+ */
 
   return (
-    <SafeArea>
-      <AvatarContainer>
+    <View
+      style={{ justifyContent: "center", width: "90%", alignSelf: "center" }}
+    >
+      <Text style={{ fontSize: 20, alignSelf: "center" }}>Feedback</Text>
+
+      <TextInput label="Name" autoCapitalize="none" />
+      <TextInput
+        label="E-mail"
+        textContentType="emailAddress"
+        keyboardType="email-address"
+        autoCapitalize="none"
+        onChangeText={(text) => this.setState({ username: text })}
+      />
+      <TextInput label="Mobile Number" autoCapitalize="none" />
+      <TextInput
+        style={{ height: 150 }}
+        label="Write Your Feedback Here"
+        autoCapitalize="none"
+      />
+      <Button
+        style={{ marginTop: 20, height: 50, justifyContent: "center" }}
+        icon="rocket"
+        mode="contained"
+        onPress={() => alert("Your Feedback Has been Submitted Succecfully")}
+      >
+        Submit
+      </Button>
+      {/* <AvatarContainer>
         <TouchableOpacity onPress={() => navigation.navigate("Camera")}>
           {!photo && (
             <Avatar.Icon size={180} icon="human" backgroundColor="#2182BD" />
@@ -50,21 +72,21 @@ export const SettingsScreen = ({ navigation }) => {
         <Spacer position="top" size="large">
           <Text variant="label">{user.email}</Text>
         </Spacer>
-      </AvatarContainer>
+      </AvatarContainer> */}
 
-      <List.Section>
-        <SettingsItem
+      {/* <List.Section> */}
+      {/* <SettingsItem
           title="Favourites"
           description="View your favourites"
           left={(props) => <List.Icon {...props} color="black" icon="heart" />}
           onPress={() => navigation.navigate("Favourites")}
-        />
-        <SettingsItem
+        /> */}
+      {/* <SettingsItem
           title="Logout"
           left={(props) => <List.Icon {...props} color="black" icon="door" />}
           onPress={onLogout}
-        />
-      </List.Section>
-    </SafeArea>
+        /> */}
+      {/* </List.Section> */}
+    </View>
   );
 };

@@ -4,7 +4,7 @@ import { colors } from "../../../infrastructure/theme/colors";
 import { Text } from "../../../components/typography/text.component";
 
 export const AccountBackground = styled.ImageBackground.attrs({
-  source: require("../../../../assets/home_bg.jpg"),
+  source: require("../../../../assets/back.png"),
 })`
   flex: 1;
   align-items: center;
@@ -19,17 +19,17 @@ export const AccountCover = styled.View`
 `;
 
 export const AccountContainer = styled.View`
-border-radius: 15px;
+  border-radius: 15px;
   background-color: rgba(255, 255, 255, 0.7);
   padding: ${(props) => props.theme.space[4]};
   margin-top: ${(props) => props.theme.space[2]};
 `;
 
 export const AuthButton = styled(Button).attrs({
-  color: colors.brand.primary,
+  color: colors.brand.muted,
 })`
-border-radius: 15px;
-  padding: ${(props) => props.theme.space[2]};
+  border-radius: 15px;
+  padding: ${(props) => props.theme.space[3]};
 `;
 export const AuthInput = styled(TextInput)`
   width: 300px;

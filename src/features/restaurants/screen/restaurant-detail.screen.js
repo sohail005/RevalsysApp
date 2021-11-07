@@ -7,16 +7,16 @@ import { RestaurantInfoCard } from "../components/restaurant-info.Card.component
 import { SafeArea } from "../../../components/utility/safe-area.component";
 
 export const RestaurantDetailScreen = ({ route }) => {
-    const [breakfastExpanded, setBreakfastExpanded] = useState(false);
-    const [lunchExpanded, setLunchExpanded] = useState(false);
-    const [dinnerExpanded, setDinnerExpanded] = useState(false);
-    const [drinksExpanded, setDrinksExpanded] = useState(false);
+  const [breakfastExpanded, setBreakfastExpanded] = useState(false);
+  const [lunchExpanded, setLunchExpanded] = useState(false);
+  const [dinnerExpanded, setDinnerExpanded] = useState(false);
+  const [drinksExpanded, setDrinksExpanded] = useState(false);
 
   const { restaurant } = route.params;
   return (
     <SafeArea>
       <RestaurantInfoCard restaurant={restaurant} />
-      <ScrollView>
+      {/* <ScrollView>
         <List.Accordion
           title="Breakfast"
           left={(props) => <List.Icon {...props} icon="bread-slice" />}
@@ -60,7 +60,7 @@ export const RestaurantDetailScreen = ({ route }) => {
           <List.Item title="Tea" />
           
         </List.Accordion>
-      </ScrollView>
+      </ScrollView> */}
     </SafeArea>
   );
 };

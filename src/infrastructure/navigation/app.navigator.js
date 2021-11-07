@@ -1,9 +1,12 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { SettingsNavigator } from "./settings.navigator";
-import { RestaurantsNavigator } from "./restaurants.navigator";
-import { MapScreen } from "../../features/map/screens/map.screen";
+import { FeedbackNavigator, SettingsNavigator } from "./settings.navigator";
+import {
+  ProductsNavigator,
+  RestaurantsNavigator,
+} from "./restaurants.navigator";
+import { HomeScreen, MapScreen } from "../../features/map/screens/map.screen";
 
 import { RestaurantsContextProvider } from "../../services/restaurants/restaurants.context";
 import { LocationContextProvider } from "../../services/location/location.context";
@@ -12,11 +15,10 @@ import { FavouritesContextProvider } from "../../services/favourites/favourite.c
 const Tab = createBottomTabNavigator();
 
 const TAB_ICON = {
-  Restaurants: "md-restaurant",
-  Map: "md-map",
-  Settings: "md-settings",
+  Products: "list",
+  Home: "home",
+  Feedback: "rocket",
 };
-
 
 const createScreenOptions = ({ route }) => {
   const iconName = TAB_ICON[route.name];
@@ -33,14 +35,14 @@ export const AppNavigator = () => (
       <RestaurantsContextProvider>
         <Tab.Navigator
           screenOptions={createScreenOptions}
-          tabBarOptions={{
-            activeTintColor: "tomato",
+          screenOptions={{
+            activeTintColor: "green",
             inactiveTintColor: "gray",
           }}
         >
-          <Tab.Screen name="Restaurants" component={RestaurantsNavigator} />
-          <Tab.Screen name="Map" component={MapScreen} />
-          <Tab.Screen name="Settings" component={SettingsNavigator} />
+          <Tab.Screen name="Home" component={HomeScreen} />
+          <Tab.Screen name="Products" component={ProductsNavigator} />
+          <Tab.Screen name="Feedback" component={FeedbackNavigator} />
         </Tab.Navigator>
       </RestaurantsContextProvider>
     </LocationContextProvider>

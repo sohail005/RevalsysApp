@@ -1,5 +1,3 @@
-
-
 import React, { useState, useContext } from "react";
 import {
   AccountBackground,
@@ -24,7 +22,7 @@ export const RegisterScreen = ({ navigation }) => {
   return (
     <AccountBackground>
       <AccountCover />
-      <Title>Easy Commerce</Title>
+      <Title>Register</Title>
       <AccountContainer>
         <AuthInput
           label="E-mail"
@@ -60,18 +58,17 @@ export const RegisterScreen = ({ navigation }) => {
           </ErrorContainer>
         )}
         <Spacer size="large">
-          
           {!isLoading ? (
             <AuthButton
-            icon="email"
-            mode="contained"
-            onPress={() => onRegister(email, password, repeatedPassword)}
-          >
-            Register
-          </AuthButton>
-        ) : (
-          <ActivityIndicator animating={true} color={Colors.blue300} />
-        )}
+              icon="email"
+              mode="contained"
+              onPress={() => onRegister(email, password, repeatedPassword)}
+            >
+              Register
+            </AuthButton>
+          ) : (
+            <ActivityIndicator animating={true} color={Colors.blue300} />
+          )}
         </Spacer>
       </AccountContainer>
       <Spacer size="large">

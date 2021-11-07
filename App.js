@@ -1,20 +1,16 @@
 import { Navigation } from "./src/infrastructure/navigation/index";
-import {StatusBar as ExpoStatusBar}  from 'expo-status-bar';
-import React, { useState, useEffect,useContext } from "react";
-import {ThemeProvider} from "styled-components/native";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import React, { useState, useEffect, useContext } from "react";
+import { ThemeProvider } from "styled-components/native";
 import * as firebase from "firebase";
-import {theme} from "./src/infrastructure/theme";
+import { theme } from "./src/infrastructure/theme";
 
 import {
   useFonts as useOswald,
   Oswald_400Regular,
-} from '@expo-google-fonts/oswald';
-import {
-  useFonts as useLato,
-  Lato_400Regular,
-} from '@expo-google-fonts/lato';
+} from "@expo-google-fonts/oswald";
+import { useFonts as useLato, Lato_400Regular } from "@expo-google-fonts/lato";
 import { AuthenticationContextProvider } from "./src/services/authentication/authentication.context";
-
 
 const firebaseConfig = {
   apiKey: "AIzaSyBg6K-xUp5rVDsuZre4clBV-3zO0wQGqzk",
@@ -23,7 +19,7 @@ const firebaseConfig = {
   storageBucket: "restaurant-69bb4.appspot.com",
   messagingSenderId: "110057275341",
   appId: "1:110057275341:web:495d166746028a41e64e84",
-  measurementId: "G-KREHE7EKSJ"
+  measurementId: "G-KREHE7EKSJ",
 };
 
 if (!firebase.apps.length) {
@@ -54,5 +50,3 @@ export default function App() {
     </>
   );
 }
-
-

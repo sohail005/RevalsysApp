@@ -1,5 +1,8 @@
 import React from "react";
-import { SettingsScreen } from "../../features/settings/screens/settings.screen";
+import {
+  FeedbackScreen,
+  SettingsScreen,
+} from "../../features/settings/screens/settings.screen";
 import { FavouritesScreen } from "../../features/settings/screens/favourites.screen";
 import {
   createStackNavigator,
@@ -9,7 +12,7 @@ import { CameraScreen } from "../../features/settings/screens/camera.screen";
 
 const SettingsStack = createStackNavigator();
 
-export const SettingsNavigator = ({ route, navigation }) => {
+export const FeedbackNavigator = ({ route, navigation }) => {
   return (
     <SettingsStack.Navigator
       headerMode="screen"
@@ -21,12 +24,11 @@ export const SettingsNavigator = ({ route, navigation }) => {
         options={{
           header: () => null,
         }}
-        name="Settings"
-        component={SettingsScreen}
+        name="Feedback"
+        component={FeedbackScreen}
       />
       <SettingsStack.Screen name="Favourites" component={FavouritesScreen} />
       <SettingsStack.Screen name="Camera" component={CameraScreen} />
-  
     </SettingsStack.Navigator>
   );
 };
