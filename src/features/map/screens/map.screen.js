@@ -44,6 +44,7 @@ export const HomeScreen = ({ navigation }) => {
         <Text variant="label" style={{ fontSize: 30, color: "green" }}>
           {user.email}
         </Text>
+        <Text style={{ fontSize: 40 }}>To The React Native</Text>
       </Spacer>
       {/* <SettingsItem title="Logout" onPress={onLogout} /> */}
       {/* <Search /> */}

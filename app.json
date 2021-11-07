@@ -4,7 +4,7 @@
     "slug": "Revalsys",
     "version": "0.0.1",
     "orientation": "portrait",
-    "icon": "./assets/easy.png",
+    "icon": "./assets/Mas.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
