@@ -1,17 +1,8 @@
 import { useFocusEffect } from "@react-navigation/core";
 import React, { useContext, useState, useEffect } from "react";
 import { Text, View } from "react-native";
-import MapView from "react-native-maps";
-import styled from "styled-components/native";
-import { Spacer } from "../../../components/spacer/spacer.component";
-import { AuthenticationContext } from "../../../services/authentication/authentication.context";
-import { LocationContext } from "../../../services/location/location.context";
-import { RestaurantsContext } from "../../../services/restaurants/restaurants.context";
-import { Search } from "../../restaurants/components/search.component";
-
-import { MapCallout } from "../screens/components/map-callout.component";
-
-
+import { Spacer } from "../../components/spacer/spacer.component";
+import { AuthenticationContext } from "../../services/authentication/authentication.context";
 
 export const HomeScreen = ({ navigation }) => {
   const { onLogout, user } = useContext(AuthenticationContext);

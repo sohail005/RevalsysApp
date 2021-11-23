@@ -1,16 +1,11 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import { FeedbackNavigator, SettingsNavigator } from "./settings.navigator";
-import {
-  ProductsNavigator,
-  RestaurantsNavigator,
-} from "./restaurants.navigator";
-import { HomeScreen, MapScreen } from "../../features/map/screens/map.screen";
+import { ProductsContextProvider } from "../../services/restaurants/products.context";
+import { FeedbackNavigator } from "./settings.navigator";
+import { ProductsNavigator } from "./Products.navigator";
+import { HomeScreen } from "../../features/home/HomeScreen";
 
-import { RestaurantsContextProvider } from "../../services/restaurants/restaurants.context";
-import { LocationContextProvider } from "../../services/location/location.context";
-import { FavouritesContextProvider } from "../../services/favourites/favourite.context";
 
 const Tab = createBottomTabNavigator();
 
@@ -30,9 +25,9 @@ const createScreenOptions = ({ route }) => {
 };
 
 export const AppNavigator = () => (
-  <FavouritesContextProvider>
-    <LocationContextProvider>
-      <RestaurantsContextProvider>
+  
+    
+      <ProductsContextProvider>
         <Tab.Navigator
           screenOptions={createScreenOptions}
           screenOptions={{
@@ -43,8 +38,9 @@ export const AppNavigator = () => (
           <Tab.Screen name="Home" component={HomeScreen} />
           <Tab.Screen name="Products" component={ProductsNavigator} />
           <Tab.Screen name="Feedback" component={FeedbackNavigator} />
+
         </Tab.Navigator>
-      </RestaurantsContextProvider>
-    </LocationContextProvider>
-  </FavouritesContextProvider>
+      </ProductsContextProvider>
+    
+
 );

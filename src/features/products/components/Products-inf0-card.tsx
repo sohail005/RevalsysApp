@@ -1,5 +1,5 @@
-import React from 'react';
-import {View, Text, StyleSheet, FlatList,Image} from 'react-native';
+import React, { useState } from 'react';
+import {View, Text, StyleSheet, FlatList,Image,TouchableOpacity} from 'react-native';
 import usePagination from "react-native-flatlist-pagination-hook";
 
 
@@ -1159,10 +1159,13 @@ const fetchApi = (page = 0, pageSize = 10) => {
             "ViewCount": 9781
          }
      ]
+     
     return new Promise(resolve => {
         setTimeout(() => resolve(data.slice(page * pageSize, (page+1) * pageSize) || []), 3000);
     });
 }
+
+
 
 const Item = ({
    StyleName,
@@ -1185,8 +1188,23 @@ const Item = ({
      <Text style={styles.title}>Code: {ProductCode}</Text>
    </View>
  );
-const RestaurantItems : React.FC<any> = () => {
-    
+const ProductItemsList : React.FC<any> = () => {
+   const [MyArray, setMyArray] = useState([]);
+   const [sortStatus, setSortStatus] = useState(true);
+
+   let handleSort = () => {
+      const data = MyArray;
+      if (sortStatus) {
+        let sorted = MyArray.sort((a, b) => (a.Price < b.Price) ? -1 : 1);
+        setMyArray(sorted);
+        setSortStatus(!sortStatus);
+      } else {
+        let sorted = MyArray.sort((a, b) => (b.Price > a.Price) ? -1 : 1);
+        setMyArray(sorted);
+        setSortStatus(!sortStatus);
+      }
+    };
+   
     const {
         data,         //use it in Flatlist data
         addData,      //push new group of data
@@ -1202,8 +1220,27 @@ const RestaurantItems : React.FC<any> = () => {
         })
     }, [pageIndex]);
     
+    let sorted=() =>{
+      data.sort((a, b) => (a.Price < b.Price) ? 1 : -1);
+     };
+     let sortedReverce=() =>{
+      data.sort((a, b) => (a.Price > b.Price) ? 1 : -1);
+     };
+    const ProductsButton = (props) => (
+      <View style={{flexDirection:'row',justifyContent:'space-around',height:30,width:'90%',alignSelf:'center',borderRadius:10,margin:2}}>
+      <TouchableOpacity style={{backgroundColor:"lightgray",borderRadius:10,justifyContent:'center',width:70,}} onPress={()=>handleSort()}><Text style={{fontWeight:'bold',alignSelf:'center'}}>Apply</Text></TouchableOpacity>
+      <TouchableOpacity style={{backgroundColor:"lightgray",borderRadius:10,justifyContent:'center',width:70}} onPress={()=>sorted()}><Text style={{fontWeight:'bold',alignSelf:'center'}}>High-Low</Text></TouchableOpacity>
+      <TouchableOpacity style={{backgroundColor:"lightgray",borderRadius:10,justifyContent:'center',width:70}} onPress={()=>sortedReverce()}><Text style={{fontWeight:'bold',alignSelf:'center'}}>Low-High</Text></TouchableOpacity>
+
+      </View>
+    );
+   
     
+
     return (
+       
+       <View >
+          <ProductsButton />
         <FlatList
         style={styles.container}
             onEndReachedThreshold={.5}
@@ -1211,6 +1248,7 @@ const RestaurantItems : React.FC<any> = () => {
             contentContainerStyle={{flexGrow: 1}}
             data={data}
             renderItem={({item} : any) => <View style={styles.productcard}>
+             
               <ProductsImage ListImagePath={item.ListImagePath}/>
               <Item
         StyleName={item.StyleName}
@@ -1223,7 +1261,7 @@ const RestaurantItems : React.FC<any> = () => {
         ProductCode={item.ProductCode}
       /></View>}
             ListFooterComponent={ListFooterComponent}
-            keyExtractor={item => item.toString()}/>
+            keyExtractor={item => item.toString()}/></View>
     );
 };
 const ProductsImage = (props) => (
@@ -1240,6 +1278,12 @@ const ProductsImage = (props) => (
      />
    </>
  );
+
+ 
+ 
+
+
+
 
 const styles = StyleSheet.create({
    container: {
@@ -1278,5 +1322,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default RestaurantItems;
-
+export default ProductItemsList;
